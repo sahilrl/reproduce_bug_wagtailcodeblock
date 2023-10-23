@@ -1,0 +1,12 @@
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block body %}
+    {% for block in page.body %}
+    <!-- streamfield -->
+        {% if block.block_type == 'code' %}
+        <div>{{ block}}</div>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
+
